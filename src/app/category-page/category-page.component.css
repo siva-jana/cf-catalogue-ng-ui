@@ -1,0 +1,192 @@
+/* Full-page wrapper with subtle background */
+.page-wrapper {
+  background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec); /* Soft gradient */
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Search bar styling */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px 15px;
+  width: 60%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+}
+
+.search-bar button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Category heading */
+.category-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Filter section */
+.filter-box {
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  margin: 10px auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #eaf1fb;
+  max-width: fit-content;
+}
+
+.filter-box label {
+  font-weight: 500;
+}
+
+/* Reset button in filter */
+.reset-button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #0056b3;
+}
+
+/* File list layout */
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual file item card */
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.file-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.file-name {
+  flex: 1;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Action buttons (view/download) */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.download-button,
+.view-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.view-button {
+  background-color: #2196F3;
+}
+
+.download-button:hover {
+  background-color: #45a049;
+}
+
+.view-button:hover {
+  background-color: #1e87db;
+}
+
+/* No files message */
+.no-files-msg {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .filter-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .download-button,
+  .view-button {
+    width: 48%;
+    text-align: center;
+  }
+}

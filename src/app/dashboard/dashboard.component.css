@@ -1,0 +1,227 @@
+/* 🌐 Wrapper */
+.dashboard-wrapper {
+  background: linear-gradient(135deg, #86adde, #a7a9ab);
+  min-height: 200vh;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🌊 Watermark Floating Text */
+.watermark-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.watermark-text {
+  position: absolute;
+  font-size: 64px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  animation: floatRandom 20s infinite linear alternate;
+}
+
+@keyframes floatRandom {
+  0% {
+    transform: translate(0vw, 0vh) rotate(0deg);
+  }
+  25% {
+    transform: translate(30vw, 20vh) rotate(10deg);
+  }
+  50% {
+    transform: translate(60vw, 40vh) rotate(-10deg);
+  }
+  75% {
+    transform: translate(40vw, 70vh) rotate(15deg);
+  }
+  100% {
+    transform: translate(10vw, 90vh) rotate(-15deg);
+  }
+}
+
+/* 🆕 Dashboard Title */
+.navbar-brand {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3d567b;
+}
+
+/* 📦 Data Catalogue Box */
+.data-catalogue-box {
+  border-radius: 12px;
+  padding: 30px;
+  background: #e9e2ed;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.data-catalogue-box h3 {
+  font-size: 34px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #304668;
+}
+
+.data-catalogue-box p {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #444;
+}
+
+/* 🔐 Auth Buttons */
+.logout-button,
+.login-button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover,
+.login-button:hover {
+  background-color: #0b5ed7;
+}
+
+/* 🔎 Filter Dropdown */
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 300px;
+}
+
+/* ✅ Form Labels & Checks */
+.form-check {
+  margin-left: 10px;
+}
+
+.form-check-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+/* 📤 Custom Filter Button */
+.custom-filter-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: 1px solid #0d6efd;
+  border-radius: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-filter-btn:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* 🗂️ Category Tabs */
+.category-tabs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 600px;
+}
+
+/* 🧩 Tab Card */
+.tab-card {
+  background: #c9d4da;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tab-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼️ Icons */
+.icon-img {
+  width: 88px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+/* 🆕 Welcome Message */
+h2.text-center.mt-4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #212529;
+}
+
+/* 🖼️ Responsive */
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    padding: 15px;
+  }
+
+  .category-tabs .row {
+    row-gap: 20px;
+    flex-direction: column;
+  }
+
+  .tab-card {
+    padding: 16px;
+  }
+
+  .custom-filter-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .data-catalogue-box {
+    padding: 20px;
+  }
+
+  .navbar .container-fluid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .logout-button,
+  .login-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/*.dashboard-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('../../assets/images/bg-img.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 30px;
+} */

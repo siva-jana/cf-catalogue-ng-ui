@@ -1,0 +1,126 @@
+/* Container card */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background: #ffffff;
+}
+
+/* Form Title */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Input fields */
+.form-control {
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+/* Input group for password visibility */
+.input-group-text {
+  background-color: #f8f9fa;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Error message styling */
+.text-danger {
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Register button */
+.btn-primary {
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Link to login */
+p.text-center a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+p.text-center a:hover {
+  text-decoration: underline;
+}
+
+/* reCAPTCHA alignment */
+re-captcha {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .row {
+    margin: 0;
+  }
+
+  .col-4 {
+    width: 100% !important;
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .input-group-text {
+    padding: 6px 12px;
+  }
+
+  p.text-center {
+    font-size: 0.85rem;
+  }
+
+  re-captcha {
+    transform: scale(0.85);
+    transform-origin: 0 0;
+  }
+}
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  padding-top: 60px;
+}

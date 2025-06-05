@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:4200/dashboard</loc></url>
+  <url><loc>http://localhost:4200/login</loc></url>
+  <url><loc>http://localhost:4200/register</loc></url>
+  <url><loc>http://localhost:4200/category/sample-category</loc></url>
+  <url><loc>http://localhost:4200/view/sample-category/sample-file.pdf</loc></url>
+</urlset>

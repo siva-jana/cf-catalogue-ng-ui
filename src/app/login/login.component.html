@@ -1,0 +1,46 @@
+<div class="login-container">
+  <!-- Close Icon -->
+  <div class="dialog-header">
+    <button mat-icon-button (click)="closeDialog()" class="close-button" aria-label="Close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <h2 class="title">Login</h2>
+
+  <div *ngIf="validationErrors.length > 0" class="error-message">
+    <p *ngFor="let error of validationErrors" class="text-danger">
+      {{ error }}
+    </p>
+  </div>
+
+  <form (submit)="loginAction()" autocomplete="off">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" [(ngModel)]="username" name="username" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [(ngModel)]="password" name="password" required />
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="isSubmitting || !username || !password"
+      type="submit"
+      class="full-width mt-2">
+      {{ isSubmitting ? 'Logging in...' : 'Login' }}
+    </button>
+  </form>
+
+  <p class="register-text">
+  Don't have an account?
+  <button class="register-button" (click)="goToRegister()">
+    Register here
+  </button>
+</p>
+
+
+</div>

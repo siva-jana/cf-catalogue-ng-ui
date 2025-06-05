@@ -1,0 +1,94 @@
+.pdf-text-output {
+  white-space: pre-wrap;
+  font-family: monospace;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+/* file-viewer.component.css */
+
+.pdf-wrapper {
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;   /* Adds border to table, headers, and cells */
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+.docx-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+.custom-blue-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-blue-btn:hover {
+  background-color: #0069d9;
+}
+@media (max-width: 768px) {
+  .pdf-wrapper,
+  .docx-wrapper,
+  .excel-wrapper {
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  .docx-content {
+    font-size: 15px;
+  }
+}

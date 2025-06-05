@@ -1,0 +1,58 @@
+<div class="page-wrapper">
+  <!-- 🔍 Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (keyup.enter)="searchAndNavigate()"
+      placeholder="Search file name..."
+    />
+    <button (click)="searchAndNavigate()">Search</button>
+  </div>
+
+  <!-- 📁 Category Heading -->
+  <h2 class="category-heading">Files for {{ categoryName | titlecase }}</h2>
+
+  <!-- ✅ Filter Box for File Types -->
+  <div class="filter-box">
+    <label><input type="checkbox" [(ngModel)]="filters.pdf" /> PDF</label>
+    <label><input type="checkbox" [(ngModel)]="filters.excel" /> Excel</label>
+    <label><input type="checkbox" [(ngModel)]="filters.word" /> Word</label>
+    <label><input type="checkbox" [(ngModel)]="filters.text" /> Text</label>
+     <label><input type="checkbox" [(ngModel)]="filters.pptx" /> PPT</label>
+    <button class="reset-button" (click)="resetFilters()">Reset</button>
+    
+  </div>
+
+  <!-- 📄 File List -->
+  <div *ngIf="filteredFiles.length; else noFiles" class="file-list">
+    <div class="file-item" *ngFor="let file of filteredFiles">
+      <img src="assets/icons/file.png" alt="icon" class="file-icon" />
+      <span class="file-name">{{ file.name }}</span>
+      <div class="actions">
+  <a
+    class="download-button"
+    [href]="'http://localhost:8080/download/' + categoryName + '/' + file.name"
+    download
+  >
+    Download
+  </a>
+
+  <!-- Show View button only if extension is allowed -->
+  <a
+    *ngIf="canView(file.name)"
+    class="view-button"
+    [routerLink]="['/view', categoryName, file.name]"
+  >
+    View
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <!-- ❗ No Files Message -->
+  <ng-template #noFiles>
+    <p class="no-files-msg">No files found for this category.</p>
+  </ng-template>
+</div>
